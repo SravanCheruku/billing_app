@@ -111,16 +111,16 @@ def iprint():
     global temp1
     global temp2
     txtReceipt.insert(END,"\n"+"Total"+"\t\t\t\t\t\t"+str(operator)+"\n")
-##    q= txtReceipt.get("1.0","end-1c")
-##    filename = tempfile.mktemp(".txt")
-##    open(filename,"w").write(q)
-##    os.startfile(filename,"print")
-##    j = 0
-##    for i in D:
-##        if D[j]<=C[j]:
-##            Warnoperator = Warnoperator + A[j] + " "
-##            Warn.set(Warnoperator)
-##        j = j+1
+    q= txtReceipt.get("1.0","end-1c")
+    filename = tempfile.mktemp(".txt")
+    open(filename,"w").write(q)
+    os.startfile(filename,"print")
+    j = 0
+    for i in D:
+        if D[j]<=C[j]:
+            Warnoperator = Warnoperator + A[j] + " "
+            Warn.set(Warnoperator)
+        j = j+1
     wbkName = "itemlist.xlsx"
     wbk = openpyxl.load_workbook(wbkName)
     for wks in wbk.worksheets:
